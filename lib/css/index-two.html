@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.bootstrap.min.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    
+    <table id="example" class="table table-striped table-bordered dt-responsive nowrap">
+
+    </table>
+
+
+    <!-- Functionality starts from Right here-->
+
+
+
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap.min.js"></script>
+    <script src="../js/dataTables.responsive.min.js"></script>
+    
+    <script src="../js/responsive.bootstrap.min.js"></script>
+    <script src="../js/data.js"></script>
+
+    <script>
+        var el = document.getElementById("example");
+        var state = [];
+        var capital = [];
+        var statesong = [];
+        var statetree = [];
+        var stateflower = [];
+        var statebird = [];
+
+
+
+
+        for (let x in usa) {
+
+
+
+            state.push(usa[x].State);
+            capital.push(usa[x].capital);
+            statesong.push(usa[x].stateSong);
+            statetree.push(usa[x].stateTree);
+            stateflower.push(usa[x].stateFlower);
+            statebird.push(usa[x].stateBird);
+
+
+
+        }
+       
+       
+
+for (var i = 0; i <state.length; i++){
+    var tr = document.createElement('tr');   
+
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4 = document.createElement('td');
+    var td5 = document.createElement('td');
+    var td6 = document.createElement('td');
+    
+
+    var s = document.createTextNode(state[i]);
+    var c = document.createTextNode(capital[i]);
+    var sg=document.createTextNode( statesong[i]);
+    var b=document.createTextNode(statebird[i]);
+    var f=document.createTextNode(stateflower[i]);
+    var t=document.createTextNode(statetree[i]);
+
+    td1.appendChild(s);
+    td2.appendChild(c);
+    td3.appendChild(sg);
+    td4.appendChild(b);
+    td5.appendChild(f);
+    td6.appendChild(t);
+
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    tr.appendChild(td5);
+    tr.appendChild(td6);
+
+    el.appendChild(tr);
+}
+document.body.appendChild(el);
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+<script>
+      $(document).ready(function () {
+            $('#example').DataTable();
+
+        });
+</script>
+
+</body>
+
+</html>

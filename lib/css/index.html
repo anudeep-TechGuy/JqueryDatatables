@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.bootstrap.min.css">
+</head>
+
+<body>
+    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+        <thead class="align-center">
+            <tr>
+                <th>State</th>
+                <th>Capital</th>
+                <th>State-Song</th>
+                <th>State-Bird</th>
+                <th>State-Tree</th>
+                <th>State-Flower</th>
+                <th>State-Beer</th>
+
+            </tr>
+        </thead>
+        <tbody id="one">
+          
+        </tbody>
+    </table>
+    <div id="content">
+
+        <hr />
+    </div>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap.min.js"></script>
+    <script src="../js/dataTables.responsive.min.js"></script>
+
+    <script src="../js/responsive.bootstrap.min.js"></script>
+    <script src="../js/data.js"></script>
+
+
+    <!-- Functionality starts from Right here-->
+    
+  
+        $(document).ready(function () {
+            $('#example').DataTable();
+
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>
